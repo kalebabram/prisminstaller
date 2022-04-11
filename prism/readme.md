@@ -31,5 +31,4 @@ After all pods are running, expose the main web container.
 Finally open your browser and head to http://127.0.0.1.nip.io:8080/ this is a nip.io proxy to allow subdomains on your local machine without editing your hosts file.
 
 # Load sample images -> from PRISM Sample data
-oc rsync ./pathology/ deployment/imageloader:/data/images
-oc exec deployment/imageloader -- imageloader -src /data/images/example.csv -username admin -password bluecheese2018 -collectionname Public
+See the instructions in the sample_data directory of this repo
