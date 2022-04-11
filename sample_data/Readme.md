@@ -7,7 +7,7 @@ First you need to download the actual sample data and extract it into this direc
 
 ```bash
 wget https://github.com/UAMS-DBMI/PRISM_sample_data/releases/download/1.0/sample_data.tar.gz
-tar xf sample_data.tar.gz
+tar -zxf sample_data.tar.gz
 ```
 
 
