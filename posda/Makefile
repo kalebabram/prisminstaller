@@ -66,6 +66,7 @@ remove-database:
 
 remove-database-pvc:
 	${CMD_DEL} pvc/posda-postgresql-pv-claim-auto
+	rm -f pvcs/posda-cache-auto-pvc.last
 
 remove-database-secret:
 	${CMD_DEL} secret/posda-postgresql-secret
@@ -78,7 +79,7 @@ remove-redis:
 
 remove-pvc-posda-cache:
 	${CMD_DEL} pvc/posda-cache-auto
-	rm -f pvc-posda-cache.last
+	rm -f pvc/pvc-posda-cache.last
 
 remove-posda-api:
 	${CMD_DEL} deployment/posda-api
