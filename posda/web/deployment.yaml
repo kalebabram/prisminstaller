@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: posdaweb
+spec:
+  ports:
+  - port: 8080
+    name: posdaweb
+  selector:
+    app: posdaweb
+  clusterIP: None
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: posdaweb
+spec:
+  selector:
+    matchLabels:
+      app: posdaweb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: posdaweb
+        posda: posdaweb
+    spec:
+      containers:
+      - image: tcia/posda_web:kubes
+        name: posda-web
+        imagePullPolicy: Always
+        # envFrom:
+        # - configMapRef:
+        #     name: posda-map
+        # - configMapRef:
+        #     name: common
+        # env:
+        # - name: PGHOST
+        #   value: "postgresql"
+        # - name: PGUSER
+        #   value: "postgres"
+        # - name: PGPASSWORD
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: postgresql-secret
+        #       key: postgresql_root_password
+        ports:
+        - containerPort: 80
+          name: posdaweb
