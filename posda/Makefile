@@ -66,7 +66,7 @@ remove-database:
 
 remove-database-pvc:
 	${CMD_DEL} pvc/posda-postgresql-pv-claim-auto
-	rm -f pvcs/posda-cache-auto-pvc.last
+	rm -f pvcs/*.last
 
 remove-database-secret:
 	${CMD_DEL} secret/posda-postgresql-secret
