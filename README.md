@@ -20,7 +20,7 @@ This release is a pre-alpha release. It has been streamlined to facilitate the v
 + If you don't already have Docker installed on your machine then download Docker (if using on Windows then follow the steps to get WSL and Docker working together) and make sure that you change the max resource settings (located under options) to at least 4 CPUs and 10GB of RAM
 + Download minikube using the correct release for your OS
 + Download a copy of this repo
-+ Start a minikube cluster using one of the following command: `minkube start --driver=docker --memory=max --cpus=max` or `minikube start --driver=docker --memory=10gb --cpus=4`
++ Start a minikube cluster using one of the following command: `minikube start --driver=docker --memory=max --cpus=max` or `minikube start --driver=docker --memory=10gb --cpus=4`
 + Change directories to the parent repo directory and run `make apply`
 + Once the containers are running and ready (you can check them using `while :; do kubectl get all; sleep 30; done`), run `make serve` 
 + Open an **incognito** browser window and navigate to http://127.0.0.1.nip.io:8080/
@@ -32,7 +32,3 @@ This release is a pre-alpha release. It has been streamlined to facilitate the v
 + Windows 10 (using Windows Subsystem for Linux)
 + MacOS x86-64 (Intel based Macs)
 + Linux x86-64
-
-
-
-https://code.imphub.org/scm/pt/k8s.git
