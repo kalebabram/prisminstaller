@@ -2,7 +2,7 @@ default: dry
 
 dry:
 	kubectl apply --recursive --dry-run=client -f ./prism
-        kubectl apply --recursive --dry-ru=client -f ./posda
+        kubectl apply --recursive --dry-run=client -f ./posda
 	@echo "\nThis was just a dry run, 'make apply' to actually create"
 	@echo "Don't forget to create your secrets.yaml, see web/secret.example and coreapi/secret.example for format"
 
