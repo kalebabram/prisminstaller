@@ -1,19 +1,31 @@
 # prism installer
+This release is a pre-alpha release. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. 
+
 
 ## What you’ll need:
 
-+ Admin rights
-+ 2 CPUs or more
-+ 2GB of free memory
++ 10GB of free memory
 + 20GB of free disk space
++ At least 4 CPUs available for minikube to use
 + Internet connection
-+ Container or virtual machine manager, such as: [Docker](https://minikube.sigs.k8s.io/docs/drivers/docker/), [Hyperkit](https://minikube.sigs.k8s.io/docs/drivers/hyperkit/), [Hyper-V](https://minikube.sigs.k8s.io/docs/drivers/hyperv/), [KVM](https://minikube.sigs.k8s.io/docs/drivers/kvm2/), [Parallels](https://minikube.sigs.k8s.io/docs/drivers/parallels/), [Podman](https://minikube.sigs.k8s.io/docs/drivers/podman/), [VirtualBox](https://minikube.sigs.k8s.io/docs/drivers/virtualbox/), or [VMware Fusion/Workstation](https://minikube.sigs.k8s.io/docs/drivers/vmware/)
 + [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) (if running Windows)
-+ Python
++ [Docker](https://minikube.sigs.k8s.io/docs/drivers/docker/)
++ If using WSL then follow [these instructions](https://docs.docker.com/desktop/windows/wsl/#download) to configure Docker with WSL
++ [minikube](https://minikube.sigs.k8s.io/docs/start/)
++ **Incognito Browser Window**
 
 
-## Quick links
-+ [
+
+## How to test the components
++ If you don't already have Docker installed on your machine then download Docker (if using on Windows then follow the steps to get WSL and Docker working together) and make sure that you change the max resource settings (located under options) to at least 4 CPUs and 10GB of RAM
++ Download minikube using the correct release for your OS
++ Download a copy of this repo
++ Start a minikube cluster using one of the following command: `minkube start --driver=docker --memory=max --cpus=max` or `minikube start --driver=docker --memory=10gb --cpus=4`
++ Change directories to the parent repo directory and run `make apply`
++ Once the containers are running and ready (you can check them using `while :; do kubectl get all; sleep 30; done`), run `make serve` 
++ Open an **incognito** browser window and navigate to http://127.0.0.1.nip.io:8080/
++ Using the landing page navigate to your component and test the functionality
++ If you need to load in data to test the complete functionality of your tool, please see the instructions in the readme located in the **sample_data** directory of this repo
 
 
 ## Supported OS and Architecture
