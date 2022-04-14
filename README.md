@@ -1,5 +1,5 @@
 # prism installer
-This release is a pre-alpha release. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. 
+This release is a pre-alpha release. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. Once each component has been validated, a more complete release will be made available.
 
 
 ## What you’ll need:
@@ -17,7 +17,7 @@ This release is a pre-alpha release. It has been streamlined to facilitate the v
 
 
 ## How to test the components
-+ If you don't already have Docker installed on your machine then download Docker (if using on Windows then follow the steps to get WSL and Docker working together) and make sure that you change the max resource settings (located under options) to at least 4 CPUs and 10GB of RAM
++ If you don't already have Docker installed on your machine then download Docker (if using on Windows then follow the steps to get WSL and Docker working together which was posted above) and make sure that you change the max resource settings (located under options) to at least 4 CPUs and 10GB of RAM
 + Download minikube using the correct release for your OS
 + Download a copy of this repo
 + Start a minikube cluster using one of the following command: `minikube start --driver=docker --memory=max --cpus=max` or `minikube start --driver=docker --memory=10gb --cpus=4`
