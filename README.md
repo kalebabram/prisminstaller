@@ -1,9 +1,10 @@
 # prism installer
-This release is an internal release for testing. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. Once each component has been validated, a more complete release will be made available.
+This release is an internal release for testing. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. Once each component has been validated, a more complete release will be made available. This release does not use the full installer script as that is not the scope of this testing, this release is explicitly designed for validating each component. 
 
 
 ## What you’ll need:
 
++ A clean computer that has not been used for any development of any PRISM components
 + 10GB of free memory
 + 20GB of free disk space
 + At least 4 CPUs available for minikube to use
