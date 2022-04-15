@@ -1,5 +1,5 @@
 # prism installer
-This release is a pre-alpha release. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. Once each component has been validated, a more complete release will be made available.
+This release is an internal release for testing. It has been streamlined to facilitate the validation of each component of the installer by the original dev team. Once each component has been validated, a more complete release will be made available.
 
 
 ## What you’ll need:
