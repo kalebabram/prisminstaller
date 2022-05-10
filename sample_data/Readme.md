@@ -29,6 +29,15 @@ kubectl exec deployment/imageloader -- imageloader -src /data/images/example.csv
 
 You can now log into PathDB (default user: `admin`, password: `bluecheese2018`) and check to see if the images have appeared properly in the Public collection.
 
+#### Releasing Images
+Once you are in the PathDB instance, the following steps are how to release images to the public collection.
+
+1. Click on "Image Review" on the right side
+2. Change the "Moderation State" to "Draft" and Apply
+3. Select all images and for action choose "Modify field values" and click "Apply to Selected Items"
+4. Scroll down and check "Moderation State" then choose "Published" for the "Save as" field. Click Apply
+5. The images will now be available under the Public Collection
+
 ## NBIA
 #### Loading
 
