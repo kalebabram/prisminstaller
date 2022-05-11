@@ -2,18 +2,57 @@ apiVersion: v1
 kind: Service
 metadata:
   name: posdaweb
+  labels:
+      prism: posda
+      posda: web
 spec:
+  type: NodePort
   ports:
   - port: 8080
     name: posdaweb
   selector:
     app: posdaweb
-  clusterIP: None
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   creationTimestamp: "2022-05-04T23:48:29Z"
+#   name: posdaweb
+#   namespace: default
+#   resourceVersion: "528285"
+#   uid: 69013cf9-5f32-4e80-854c-ff1ea7e9daa6
+# spec:
+#   clusterIP: 10.110.162.142
+#   clusterIPs:
+#   - 10.110.162.142
+#   externalTrafficPolicy: Cluster
+#   internalTrafficPolicy: Cluster
+#   ipFamilies:
+#   - IPv4
+#   ipFamilyPolicy: SingleStack
+#   ports:
+#   - nodePort: 31801
+#     port: 8080
+#     protocol: TCP
+#     targetPort: 8080
+#   selector:
+#     app: posdaweb
+#   sessionAffinity: None
+#   type: NodePort
+# status:
+#   loadBalancer: {}
+
+
+
+
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: posdaweb
+  labels:
+      prism: posda
+      posda: web
 spec:
   selector:
     matchLabels:

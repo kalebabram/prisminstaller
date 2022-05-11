@@ -3,6 +3,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kaleidoscope
+  labels:
+      prism: posda
+      posda: kaleidoscope
 spec:
   ports:
   - port: 8089
@@ -14,6 +17,9 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: kaleidoscope
+  labels:
+      prism: posda
+      posda: kaleidoscope
 spec:
   selector:
     matchLabels:
