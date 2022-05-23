@@ -6,3 +6,6 @@ data:
 kind: ConfigMap
 metadata:
   name: posda-database
+  labels:
+      prism: posda
+      posda: config-posda-database

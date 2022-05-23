@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: posda
+  labels:
+      prism: posda
+      posda: posda
 spec:
   ports:
   - port: 64610
@@ -12,6 +15,10 @@ spec:
     name: posda2
   - port: 64617
     name: posda3
+  - port: 64618
+    name: posda4
+  - port: 64619
+    name: posda5
   selector:
     app: posda
   clusterIP: None
@@ -20,6 +27,9 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: posda
+  labels:
+      prism: posda
+      posda: posda
 spec:
   selector:
     matchLabels:
@@ -74,6 +84,10 @@ spec:
           name: posda2
         - containerPort: 64617
           name: posda3
+        - containerPort: 64618
+          name: posda4
+        - containerPort: 64619
+          name: posda5
         volumeMounts:
         - name: posda-cache
           mountPath: /home/posda/cache

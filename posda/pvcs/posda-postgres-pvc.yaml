@@ -2,6 +2,9 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: posda-postgresql-pv-claim-auto
+  labels:
+      prism: posda
+      posda: postgres-pvc
 spec:
   accessModes:
     - ReadWriteOnce
