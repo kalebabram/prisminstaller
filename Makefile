@@ -11,8 +11,8 @@ apply:
 	kubectl apply --recursive -f ./posda
 
 serve:
-	@echo open: http://127.0.0.1.nip.io:8080/
-	kubectl port-forward svc/web 8080:8080
+	@echo open: http://127.0.0.1.nip.io:8181/
+	kubectl port-forward -n ingress-nginx service/ingress-nginx-controller 8181:80
 
 status:
 	kubectl get all -l prism
