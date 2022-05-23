@@ -25,7 +25,7 @@ This release is an internal release for **testing**. It has been streamlined to 
 + Enable ingress addon `minikube addons enable ingress`
 + If on MacOS or WSL run `minikube tunnel` in a new terminal window and leave this open.
 + Change directories to the parent repo directory and run `make apply`
-+ Once **ALL** the containers are running and ready (you can check them using `while :; do kubectl get all; sleep 30; done`), run `kubectl rollout restart -n default deployment web`
++ Wait for **ALL** the containers to have the status of running (you can check them using `while :; do kubectl get all; sleep 30; done`).
 + If you need to load in data to test the complete functionality of your tool, please see the instructions in the readme located in the **sample_data** directory of this repo
 + Then run `make serve` from the parent directory of this repo
 + Open an **incognito** browser window and navigate to http://127.0.0.1.nip.io:8181/
