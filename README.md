@@ -23,7 +23,7 @@ This release is an internal release for **testing**. It has been streamlined to 
 + Download a copy of this repo
 + Start a minikube cluster using one of the following command: `minikube start --driver=docker --memory=max --cpus=max` or `minikube start --driver=docker --memory=10gb --cpus=4`. **If you did not change the default docker resource settings you will not be able to deploy a full instance of PRISM.**
 + Enable ingress addon `minikube addons enable ingress`
-+ If on MacOS or WSL run `minikube tunnel` in a new terminal window and leave this open.
++ If on MacOS or WSL run `minikube tunnel` in a **new terminal window and leave this open**.
 + Change directories to the parent repo directory and run `make apply`
 + Wait for **ALL** the containers to have the status of running (you can check them using `while :; do kubectl get all; sleep 30; done`).
 + If you need to load in data to test the complete functionality of your tool, please see the instructions in the readme located in the **sample_data** directory of this repo
