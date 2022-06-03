@@ -18,3 +18,4 @@ data:
               expires      1d;
               root   /app;
           }
+      }
