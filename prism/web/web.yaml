@@ -34,7 +34,7 @@ spec:
         prism: web
     spec:
       containers:
-        - image: tcia/prism_landing:v1.0
+        - image: tcia/prism_landing:v1.1
           name: web
           ports:
             - containerPort: 8080
@@ -42,10 +42,15 @@ spec:
           volumeMounts:
           - name: nginx-conf
             mountPath: /opt/bitnami/nginx/conf/server_blocks/
+          - name: landing-conf
+            mountPath: /app/config
           imagePullPolicy: Always
       restartPolicy: Always
       volumes:
       - name: nginx-conf
         configMap:
           name: nginx-api-configmap
+      - name: landing-conf
+        configMap:
+          name: landing-configmap
 status: {}
