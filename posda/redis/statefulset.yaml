@@ -30,7 +30,7 @@ spec:
         app: redis
     spec:
       containers:
-      - image: bitnami/redis:latest
+      - image: bitnami/redis:6.2
         name: redis
         env:
         - name: ALLOW_EMPTY_PASSWORD
