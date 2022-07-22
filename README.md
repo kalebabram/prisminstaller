@@ -1,8 +1,9 @@
+![PRISM Logo](https://prismtools.dev/wp-content/uploads/2019/12/prism_logo-2x-drkbkgd.png)
 # PRISM Installer
 Platform for Imaging in Precision Medicine (PRISM) is a UAMS-centric repository for biomedical image-based software tools. The tools in PRISM focus on digital pathology, interactive deep learning, and data management. This installer will create automatically deploy the selected PRISM components. 
 
 
-## Requirements:
+## Requirements
 
 + 10GB of free memory
 + 30GB of free disk space
