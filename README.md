@@ -124,6 +124,8 @@ It should now not only load but when clicking "show collections" have a collecti
 + If you are doing a large installation, we recommend you modify the storage claims in the PVCs for each component
 + If you don't want to have all the PRISM components installed, you can simply remove the directory for the component. Note that only the directories named POSDA, NBIA, PATHDB, and semapi can be removed without breaking the PRISM instance.
 + If you remove components, you should modify prism/web/landing-configmap.yaml and change the corresponding removed service to false
-+ Once you have made all the modifications you want, simply run `kubectl apply --recursive -f .` to deploy all PRISM components
++ If you want to keep all PRISM components in their own namespace, create a new namespace named prism `kubectl create namespace prism`
++ Once you have made all the modifications you want, simply run `kubectl apply --recursive -f .` to deploy all PRISM components. If you created a new namespace for PRISM then run `kubectl apply --recursive -f . --namespace=prism`
+
 
 
